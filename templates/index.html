@@ -12,11 +12,13 @@
     {% elif country == "usa" %}
         <h1>Currency is USD</h1>
     {% else %}
-        <h1>Your default currency set to BTC!</h1>
+        <h1>Your default currency set to None!</h1>
+        <img src="{{ url_for('static', filename='images/homepage.jpg') }}" alt="">
     {% endif %}
 
     {% if source %}
         <h1>Thanks for visting through {{ source }}</h1>
+        
     {% endif %}
 {% endblock %}
 
