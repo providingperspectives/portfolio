@@ -31,12 +31,13 @@ def portfolio():
         {'name': 'Codebook', 'description': 'This is the second project.', 'endpoint': 'codebook'},
         {'name': 'Taskmate', 'description': 'This is the third project.', 'endpoint': 'taskmate'},
         {'name': 'Recipebook', 'description': 'This is the fourth project.', 'endpoint': 'recipebook'},
+        {'name': 'Safirglobal', 'description': 'This is the fifth project.', 'endpoint': 'safirglobal'}
     ]
     return render_template("portfolio.html", projects=projects_list)
 
 @main.route("/portfolio/<project>")
 def project(project):
-    projects_lst = ["cinemahub", "codebook", "taskmate", "recipebook"]
+    projects_lst = ["cinemahub", "codebook", "taskmate", "recipebook", "safirglobal"]
     if project in projects_lst:
         return render_template(f"portfolio/{project}.html")
     else:
